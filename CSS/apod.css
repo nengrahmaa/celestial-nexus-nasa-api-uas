@@ -1,0 +1,78 @@
+body {
+  background-color: black;
+}
+
+main {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* judul menu */
+.title-menu {
+  padding: 50px 5% 10px;
+}
+
+.title-menu-apod {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  text-shadow: 0px 4px 2px rgba(33, 32, 32, 0.5);
+  border-radius: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: var(--h1Fs);
+  text-transform: uppercase;
+}
+/* container */
+
+.apod-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: rgba(170, 165, 165, 0.4);
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.img-apod {
+  background-color: black;
+  overflow: hidden;
+}
+
+.img-apod img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* content data */
+.apod-data {
+  background-color: #ddd8d8;
+  padding: 20px;
+  max-height: 100%; 
+  font-size: var(--normalFs);
+  color: var(--fo);
+  text-align: justify;
+}
+
+.apod-title h2 {
+  margin: 0;
+  font-size: var(--h3Fs);
+}
+
+.pre-data p, .data p {
+  margin: 10px 0;
+}
+
+
+.copyright {
+  font-size: var(--smallFs);
+  color: var(--fo);
+}
+
+/* end */

@@ -1,0 +1,175 @@
+
+main {
+    min-height: 100vh;
+    justify-content: center;
+    background-image: url("https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    text-align: center;
+  }
+/* judul menu */
+.title-epic {
+    padding: 50px 5% 10px;
+}
+
+.title-menu {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    text-shadow: 0px 4px 2px rgba(33, 32, 32, 0.5);
+    border-radius: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: var(--h1Fs);
+    text-transform: uppercase;
+}
+/* container */
+#epic-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+    margin: 0 10%;
+
+}
+
+#epic-image-container {
+    position: relative;
+    background-color: var(--fos);
+    font-size: var(--normalFs);
+    color: var(--bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 3px rgba(253, 252, 252, 0.6);
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.images-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.images-wrapper img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+}
+
+/* arrow untuk slider */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #333;
+    padding: 10px;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* melihat no gambar */
+#current-image-index {
+    margin-top: 5px;
+}
+/* container data */
+
+#epic-data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: black;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 2px 3px rgba(253, 252, 252, 0.6);
+}
+.title-data h1{
+    text-transform: capitalize;
+    font-size: var(--h3Fs);
+}
+#image-date {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--bg);
+    background-color: var(--fos);
+    padding: 4%;
+    width: 100%;
+    border: 10px 10px 0 0;
+    font-weight: var(--fontMed);
+    border-radius: 10px;
+}
+
+#image-caption {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* jarak */
+.distances-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    line-height: 2;
+}
+.distances-grid .icon{
+    color: var(--fos);
+    text-shadow: none;
+    animation: pulse 2s infinite; /* memberikan animasi pada image data */
+}
+/* animasi */
+@keyframes pulse {
+    /* titik awal */
+    0% {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+    /* titik tengah */
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    /* titik akhir */
+    100% {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+    #epic-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px){
+    .icon{
+        font-size: 90%;
+    }
+
+}
+/* end */

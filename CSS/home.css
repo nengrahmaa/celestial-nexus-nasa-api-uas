@@ -1,0 +1,565 @@
+/* main start */
+.main {
+    overflow: hidden;
+    margin: 4%;
+    background: black;
+}
+
+/* opening */
+.home-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(180deg,
+            hsla(0, 0%, 0%, 0) 58%,
+            hsl(0, 0%, 0%) 78%);
+}
+
+.home-container {
+    position: relative;
+    row-gap: 3rem;
+    padding: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    color: var(--fos);
+}
+
+.home-data {
+    text-align: center;
+}
+
+.home-subtitle {
+    font-size: var(--h3Fs);
+    margin-bottom: .5rem;
+}
+
+.home-title {
+    font-size: var(--bigFont);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    line-height: .9;
+}
+
+.home-decs {
+    margin-bottom: 2rem;
+    color: #fff;
+    font-size: var(--normalFs);
+    text-align: justify;
+    outline-color: var(--bg);
+    text-shadow: var(--bg);
+    padding: 1rem;
+    line-height: 1.4;
+}
+
+/*  button sebelum login*/
+.button-home {
+    background-color: rgb(31, 138, 233);
+    padding: 1rem 1.2rem;
+    color: var(--op);
+    font-size: var(--smallFs);
+    align-items: center;
+    column-gap: .5rem;
+    font-weight: var(--fontSb);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.button-home:hover {
+    background-color: rgb(27, 114, 176);
+}
+
+/* form login container*/
+.form-wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 300px;
+    background: transparent;
+    border: 2px solid rgba(251, 247, 247, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    z-index: 100;
+    display: none;
+    overflow: hidden;
+    transition: transform .5s ease;
+}
+
+.form-box.login {
+    display: none;
+}
+
+.form-box.register {
+    display: none;
+}
+
+.form-box.active {
+    display: block;
+}
+
+.main .form-wrap .form-box {
+    width: 100%;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: var(--normalFs);
+    color: var(--foss);
+    font-weight: var(--fontMed);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.form-box h2 {
+    font-size: var(--h3Fs);
+    color: var(--op);
+    text-align: center;
+}
+
+.main .form-wrap .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: var(--op);
+    font-size: 2em;
+    font-weight: var(--fontSb);
+    color: var(--bgs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--bgs);
+    margin: 30px 0;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--op);
+    line-height: 57px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: var(--normalFs);
+    color: var(--op);
+    font-weight: var(--fontSb);
+    padding: 0 35px 0 5px;
+
+}
+
+.forgot {
+    font-size: var(--smallFs);
+    color: var(--op);
+    font-weight: var(--fontMed);
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forgot label input {
+    accent-color: var(--bgs);
+    margin-right: 3px;
+}
+
+.forgot a {
+    color: var(--op);
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    background: var(--op);
+    color: var(--bg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-register {
+    font-size: var(--smallFs);
+    color: var(--op);
+    text-align: center;
+    font-weight: var(--fontMed);
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: var(--op);
+    font-weight: var(--fontSb);
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+    color: var(--foss);
+}
+
+
+/* resposive form */
+@media (max-width: 600px) {
+    .form-wrap {
+        width: 90%;
+    }
+
+    .input-box input {
+        padding: 10px 10px 10px 35px;
+    }
+
+    .input-box .icon {
+        left: 5px;
+        z-index: -1;
+    }
+
+    .input-box label {
+        left: 35px;
+    }
+}
+
+/*  SOLAR SYSTEM START */
+.solar {
+    position: relative;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--h1Fs);
+    text-align: center;
+    padding: 8px 30px;
+    text-transform: capitalize;
+}
+
+.konten {
+    display: flex;
+    margin-top: 5px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    overflow: scroll;
+    gap: 20px;
+    overflow-y: hidden;
+}
+
+.kontent::-webkit-scrollbar {
+    display: none;
+}
+
+.konten::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+.konten::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.konten::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+.konten {
+    display: flex;
+    margin-top: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    overflow-y: hidden;
+}
+
+
+.card {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s;
+    width: 250px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    transition: transform 0.5s, opacity 0.2s;
+}
+
+.card:hover img {
+    transform: scale(.8);
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: var(--h3Fs);
+    text-shadow: 2px 2px 4px rgba(33, 32, 32, 0.5);
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    color: var(--op);
+    padding: 8px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.card:hover h3 {
+    opacity: 1;
+}
+
+.card .learn-more {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    color: var(--op);
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.card .learn-more:hover {
+    color: var(--fos);
+    text-decoration: underline;
+}
+
+.card:hover .learn-more {
+    opacity: 1;
+}
+
+/*  STOPPED HERE  */
+
+
+/* NEWS SECTION */
+/* scrollbar news */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--op);
+    border: 100px;
+}
+
+/* content */
+.news {
+    position: relative;
+    padding: 100px 10px 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    grid-template-rows: auto 1fr;
+    color: white;
+}
+
+.title-news-section {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: var(--h1Fs);
+    font-weight: var(--fontSb);
+    text-transform: capitalize;
+}
+
+.news .left-news {
+    padding: 10px 30px;
+}
+
+.news .left-news .img-news {
+    width: 100%;
+    height: 400px;
+    background-color: blanchedalmond;
+}
+
+.news .left-news .img-news img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.news .left-news .text-news {
+    padding: 20px 15px 10px;
+}
+
+.news .left-news .text>.title-news a {
+    font-size: var(--h3Fs);
+    letter-spacing: 1px;
+    font-weight: var(--fontSb);
+    color: var(--foss);
+    display: inline;
+    cursor: pointer;
+}
+
+.news .left-news .text>.title-news:hover {
+    text-decoration: underline;
+}
+
+.news .left-news .text-news .decs-newsartc {
+    font-size: 15px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.news .right-news {
+    padding: 10px;
+    width: 100%;
+    height: 600px;
+}
+
+.news .right-news>.title-news-section h3 {
+    font-size: var(--normalFs);
+    padding: 15px;
+    text-align: center;
+}
+
+.news .right-news .top-news {
+    padding: 7px;
+    height: 85%;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.news .right-news .top-news .inner-news {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.news .right-news .top-news .inner-news .img-news {
+    width: 170px;
+    height: 120px;
+    background-color: goldenrod;
+    overflow: hidden;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.news .right-news .top-news .inner-news .img-news img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news .right-news .top-news .inner-news .text {
+    margin-inline: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.news .right-news .top-news .inner-news .text .title-news a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--op);
+}
+
+.news .right-news .top-news .inner-news .text .title-news:hover {
+    text-decoration: underline;
+    color: var(--foss);
+}
+
+/* stop here */
+
+/* break */
+.break {
+    position: relative;
+    width: 100%;
+    height: 333px;
+    margin-top: -50px; 
+}
+
+.break-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.break-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.break-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, 
+                hsl(0, 0%, 0%) 5%,
+                hsla(0, 0%, 0%, 0) 40%,
+                hsla(0, 0%, 0%, 0) 60%,
+                hsl(0, 0%, 0%) 92%), /* Vertikal */
+                linear-gradient(90deg, 
+                hsl(0, 0%, 0%) 5%,
+                hsla(0, 0%, 0%, 0) 20%,
+                hsla(0, 0%, 0%, 0) 80%,
+                hsl(0, 0%, 0%) 90%); 
+}
+
+/* end */

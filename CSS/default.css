@@ -1,0 +1,307 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+ /* variabel */
+:root {
+    /* color */
+    --bg: #050e31;
+    --bgs: #1B1A55;
+    --fo: #535C91;
+    --fos: #9290C3;
+    --foss: #c3c2e8;
+    --op: rgb(208, 203, 203);
+    --abt: #2c3671;
+    --hoverColor: #7496bd98;
+    --activeColor: #636ed4;
+
+    /* font */
+    --bigFont: 4rem;
+    --h1Fs: 2.5rem;
+    --h2Fs: 2rem;
+    --h3Fs: 1.8rem;
+    --normalFs: 1.2rem;
+    --smallFs: .875rem;
+
+    /* font weight */
+    --fontReg: 400;
+    --fontMed: 500;
+    --fontSb: 600;
+
+    /* zindex */
+    --tooltip: 10;
+}
+/* root di atas adalah salah satu vanilla css yang mempermudah kita dalam mengatur css kita nantinya hanya perlu memanggil variable dengan fungsi var() */
+
+/* universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+}
+
+/* untuk scroll bar */
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--op);
+}
+
+/* base */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+    color: var(--fos);
+}
+
+a{
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+/* css classes */
+.container{
+    max-width: 1120px;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section {
+    padding-block: 5rem 3rem;
+}
+.section-title{
+    text-align: center;
+    font-size: var(--h1Fs);
+    margin-bottom: 1.5rem;
+}
+
+/* header */
+.header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 10px 5%;
+    transition: 0.5s ease;
+    background-color: transparent;
+}
+
+/* add blur header ketika di scroll */
+.blur-header::after{
+    content: '';
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    background: hsla(235, 54%, 49%, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* nama website */
+.logo {
+    font-size: var(--h2Fs);
+    color: var(--op);
+    text-shadow: 2px 2px 4px rgba(215, 206, 206, 0.5);
+    font-weight: var(--fontSb);
+    text-transform: uppercase;
+    margin: 0 auto 0 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    color: var(--fos);
+}
+
+.user {
+    display: flex;
+}
+
+.user img {
+    width: 40px;
+    height: auto;
+    background: var(--foss);
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Navbar items styles */
+
+.header .navbar {
+    position: relative;
+}
+
+.header .navbar .navbar-items a {
+    position: relative;
+    color: var(--op);
+    font-size: var(--normalFs);
+    font-weight: 900;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+.header .navbar .navbar-items a:hover {
+    color: var(--fo);
+}
+
+.header .navbar .navbar-items a.active {
+    color: var(--activeColor); 
+}
+
+.header .navbar .navbar-items a:before {
+    content: '';
+    position: absolute;
+    background: var(--fos);
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.header .navbar .navbar-items a:hover:before,
+.header .navbar .navbar-items a.active:before {
+    width: 100%;
+}
+
+/* =========== footer style ========*/
+
+footer {
+    width: 100%;
+    padding: 50px 50px; 
+    overflow: hidden;
+    border-top: 1px solid white ;
+    background: black;
+}
+
+footer .footer-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 20px;
+    font-size: var(--normalFs);
+    font-weight: var(--fontReg);
+    line-height: 1.5;
+    text-align: justify;
+}
+
+footer .footer-container .sec h2 {
+    position: relative;
+    color: rgb(194, 199, 204);
+    font-weight: var(--fontSb);
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+footer .footer-container .sec h2>span{
+    color: var(--fos);
+    text-shadow: 2px 2px 4px rgba(215, 206, 206, 0.5);
+}
+
+footer .footer-container .sec {
+    color: var(--foss);
+}
+
+footer .footer-container .sosmed {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+}
+
+img {
+    width: 15px;
+}
+
+footer .footer-container .sosmed li a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--foss);
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: color .4s, transform .5s;
+}
+
+footer .footer-container .sosmed li a:hover {
+    background-color: var(--fo);
+    cursor: pointer;
+    transform: translateY(-.30rem);
+}
+
+footer .footer-container .quicklink li a {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--foss);
+    line-height: .9;
+}
+
+footer .footer-container .quicklink li a:hover {
+    color: var(--fo);
+}
+
+footer .footer-container .contact .info-contact {
+    position: relative;
+}
+
+.copyright .foot-cont {
+    width: 100%;
+    background: black;
+    border-top: 1px solid var(--foss);
+    padding: 10px 20px; 
+    text-align: center;
+    color: var(--foss);
+    font-weight: var(--fontMed);
+    font-size: var(--normalFs);
+}
+
+/* ============ scroll up ============= */
+.scroll-up{
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
+    background-color: hsla(0, 0%, 100%, .1);
+    padding: 6px;
+    display: inline-flex;
+    color: var(--op);
+    font-size: 1.25rem;
+    backdrop-filter: blur(24px);
+    --webkit-backdrop-filter: blur(24px);
+    z-index: var(--tooltip);
+    transition: bottom .4s, transform .4s;
+}
+
+.scroll-up:hover{
+    transform: translateY(-.25rem);
+}
+
+/* show scrollup */
+.show-scroll{
+    bottom: 4rem;
+}
