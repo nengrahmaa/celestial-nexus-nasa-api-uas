@@ -13,9 +13,9 @@
     <link rel="icon" href="../asset/favicon-32x32.png" type="image/x-icon">
 
     <!-- ===== link css ===== -->
-    <link rel="stylesheet" href="../CSS/default.css">
-    <link rel="stylesheet" href="../CSS/media.css">
-    <link rel="stylesheet" href="../CSS/about.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/epic.css">
 </head>
 
 <body>
@@ -71,44 +71,88 @@
 
     <!-- === main === -->
     <main>
-        <!-- ===== section about ===== -->
-        <section class="about section">
-            <!-- ===== container about ===== -->
-            <div class="about-container container grid">
-                <div class="about-image">
-                    <!-- ===== about photo background ===== -->
-                    <img src="https://images.pexels.com/photos/17505898/pexels-photo-17505898/free-photo-of-telescope-photo-of-m33-galaxy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                        alt="CelestialNexusExlorer" class="about-img">
-                    <div class="about-shadow"></div>
+        <!-- === title menu === -->
+        <section class="title-epic">
+            <div class="title-menu">
+                <h1>Earth Polychromatic Imaging Camera (EPIC)</h1>
+            </div>
+        </section>
+        <!-- === content === -->
+        <section>
+            <!-- ========= content utama epic ============== -->
+            <div id="epic-container">
+                <div id="epic-image-container">
+                    <div class="slider">
+                        <div id="images-wrapper" class="images-wrapper"></div>
+                        <button class="arrow left-arrow" id="left-arrow">&#9664;</button>
+                        <button class="arrow right-arrow" id="right-arrow">&#9654;</button>
+                    </div>
+                    <div class="image-indicator" id="current-image-index">1 of 1</div>
                 </div>
 
-                <!-- ===== content utama menu about ===== -->
-                <div class="about-data">
-                    <h2 class="about-title">
-                        about Celestial nexus
-                    </h2>
-
-                    <p class="about-decs">
-                        Welcome to Celestial Nexus, your gateway to the infinite mysteries of the universe. We are
-                        dedicated
-                        to bringing the wonders of the cosmos closer to you, sparking curiosity and expanding your
-                        understanding of the celestial realms. Whether you're a seasoned astronomer, an enthusiastic
-                        stargazer, or simply captivated by the night sky, Celestial Nexus offers an enriching journey
-                        through space. Our meticulously curated content, stunning visuals, and comprehensive guides make
-                        the
-                        complexities of the universe accessible and engaging for everyone.
-                    </p>
-                    <p class="about-decs">
-                        At Celestial Nexus, we believe the universe is a tapestry of celestial bodies, each with its own
-                        story. We're committed to unveiling these cosmic wonders and fostering a deeper appreciation for
-                        the
-                        natural world. Our educational resources cover a broad spectrum of topics, from the life cycles
-                        of
-                        stars to the mysteries of black holes, providing a multifaceted learning experience. Join our
-                        community of like-minded individuals who share a passion for the cosmos. Together, we can
-                        explore
-                        the universe, inspire future generations of astronomers, and unlock the secrets of the stars.
-                    </p>
+                <div id="epic-data-container">
+                    <div id="image-date">Date</div>
+                    <div class="title-data">
+                        <span class="material-icons icon">news</span>
+                        <h1>Image Data</h1>
+                    </div>
+                    <div id="image-caption">Caption</div>
+                    <div class="distances-grid">
+                        <div class="dis-one">
+                            <div class="logo">
+                                <span class="material-icons icon">public</span>
+                                <span class="material-icons icon">arrow_forward</span>
+                                <span class="material-icons icon">sunny</span>
+                            </div>
+                            <h3>Earth to Sun</h3>
+                            <p>152,000,898 km</p>
+                        </div>
+                        <div class="dis-two">
+                            <div class="logo">
+                                <span class="material-icons icon">public</span>
+                                <span class="material-icons icon">arrow_forward</span>
+                                <span class="material-icons icon">dark_mode</span>
+                            </div>
+                            <h3>Earth to Moon</h3>
+                            <p>372,148 km</p>
+                        </div>
+                        <div class="dis-three">
+                            <div class="logo">
+                                <span class="material-icons icon">satellite_alt</span>
+                                <span class="material-icons icon">arrow_forward</span>
+                                <span class="material-icons icon">sunny</span>
+                            </div>
+                            <h3>EPIC to Sun</h3>
+                            <p>150,577,417 km</p>
+                        </div>
+                        <div class="dis-four">
+                            <div class="logo">
+                                <span class="material-icons icon">satellite_alt</span>
+                                <span class="material-icons icon">arrow_forward</span>
+                                <span class="material-icons icon">dark_mode</span>
+                            </div>
+                            <h3>EPIC to Moon</h3>
+                            <p>1,796,880 km</p>
+                        </div>
+                        <div class="dis-five">
+                            <div class="logo">
+                                <span class="material-icons icon">public</span>
+                                <span class="material-icons icon">arrow_forward</span>
+                                <span class="material-icons icon">satellite_alt</span>
+                            </div>
+                            <h3>Earth to EPIC</h3>
+                            <p>1,434,993 km</p>
+                        </div>
+                        <div class="dis-six">
+                            <div class="logo">
+                                <span class="material-icons icon">sunny</span>
+                                <span class="material-icons icon">public</span>
+                                <span class="material-icons icon">satellite_alt</span>
+                            </div>
+                            <h3>SEV angle</h3>
+                            <p>7.23°</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -189,6 +233,8 @@
 
     <!-- ===== js default yang ada di semua file html ===== -->
     <script src="../JS/script.js"></script>
+    <!-- ===== js api epic menu ===== -->
+    <script src="../JS/epic.js"></script>
 </body>
 
 </html>
