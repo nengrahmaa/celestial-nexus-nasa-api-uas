@@ -5,7 +5,7 @@ Celestial Nexus merupakan proyek UAS untuk pelatihan pengembangan web dengan tem
 
 ---
 
-## Demo (Jika Tersedia)  
+## Demo 
 Tautan live demo:  
 [Celestial Nexus Demo](https://celestial-nexus-nasa-api-uas-web.vercel.app/)
 
